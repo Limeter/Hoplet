@@ -1,0 +1,7 @@
+{
+  "required": true,
+  "package": "com.limeter.hoplet.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": ["LivingEntityAccessor"],
+  "injectors": { "defaultRequire": 1 }
+}
