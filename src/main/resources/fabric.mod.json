@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "hoplet",
+  "version": "${version}",
+  "name": "Hoplet",
+  "description": "Removes the jump cooldown - no delay between jumps. Client-side only.",
+  "authors": ["Limeter"],
+  "license": "MIT",
+  "icon": "assets/hoplet/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.limeter.hoplet.HopletClient"]
+  },
+  "mixins": ["hoplet.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "1.21.4",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}

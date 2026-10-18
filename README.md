@@ -1,55 +1,24 @@
-# Hoplet
+﻿# Hoplet — Fabric / Minecraft 1.21.4
 
-Removes the vanilla 4-tick jump cooldown — hold Space and hop continuously.
+Removes the vanilla 4-tick jump cooldown: hold Space and hop continuously.
+Client-side only, no settings, no keybinds.
 
-- Client-side only: works on vanilla and modded servers, nothing to install server-side
-- No settings, no keybinds, no dependencies beyond the loader (Fabric API on Fabric)
-- One event handler, ~20 lines of code
+- Loader: Fabric API 0.119.x
+- Minecraft: 1.21.4
+- Build system: Loom 1.12, 
+- Requires [Fabric API](https://modrinth.com/mod/fabric-api) at runtime
 
-## Download
+## Build
 
-[Modrinth](https://modrinth.com/mod/hoplet) · [Releases](https://github.com/Limeter/Hoplet/releases)
-
-| Minecraft | Forge | Fabric |
-|---|---|---|
-| 1.20.1 | [jar](https://github.com/Limeter/Hoplet/releases/download/v1.0.0/hoplet-1.0.0-forge-1.20.1.jar) | [jar](https://github.com/Limeter/Hoplet/releases/download/v1.0.0/hoplet-1.0.0-fabric-1.20.1.jar) |
-| 1.21.4 | [jar](https://github.com/Limeter/Hoplet/releases/download/v1.0.0/hoplet-1.0.0-forge-1.21.4.jar) | [jar](https://github.com/Limeter/Hoplet/releases/download/v1.0.0/hoplet-1.0.0-fabric-1.21.4.jar) |
-| 1.21.11 | [jar](https://github.com/Limeter/Hoplet/releases/download/v1.0.0/hoplet-1.0.0-forge-1.21.11.jar) | [jar](https://github.com/Limeter/Hoplet/releases/download/v1.0.0/hoplet-1.0.0-fabric-1.21.11.jar) |
-
-Fabric builds require [Fabric API](https://modrinth.com/mod/fabric-api).
-
-## Repository layout
-
-Every target lives in its own branch with the project at the repository root:
-
-| Branch | Minecraft | Loader | Toolchain |
-|---|---|---|---|
-| [`forge-1.20.1`](https://github.com/Limeter/Hoplet/tree/forge-1.20.1) | 1.20.1 | Forge 47.x | Java 17, ForgeGradle 6 |
-| [`fabric-1.20.1`](https://github.com/Limeter/Hoplet/tree/fabric-1.20.1) | 1.20.1 | Fabric API 0.92.x | Java 17, Loom 1.8 |
-| [`forge-1.21.4`](https://github.com/Limeter/Hoplet/tree/forge-1.21.4) | 1.21.4 | Forge 54.x | Java 21, ForgeGradle 7 |
-| [`fabric-1.21.4`](https://github.com/Limeter/Hoplet/tree/fabric-1.21.4) | 1.21.4 | Fabric API 0.119.x | Java 21, Loom 1.12 |
-| [`forge-1.21.11`](https://github.com/Limeter/Hoplet/tree/forge-1.21.11) | 1.21.11 | Forge 61.x | Java 21, ForgeGradle 7 |
-| [`fabric-1.21.11`](https://github.com/Limeter/Hoplet/tree/fabric-1.21.11) | 1.21.11 | Fabric API 0.141.x | Java 21, Loom 1.19 |
-
-## Building
-
-```powershell
-git clone -b forge-1.20.1 https://github.com/Limeter/Hoplet.git
+`powershell
+git clone -b fabric-1.21.4 https://github.com/Limeter/Hoplet.git
 cd Hoplet
 .\gradlew.bat build
-```
+`
 
 The jar is written to `build/libs/hoplet-1.0.0.jar`.
 
-## How it works
-
-The vanilla player jump is gated by a 4-tick cooldown. Each client tick the mod
-resets it to zero, so holding Space hops continuously:
-
-- **Forge** — `ClientTickEvent` (end of tick) sets `LivingEntity.noJumpDelay = 0`,
-  made accessible through an access transformer
-- **Fabric** — `ClientTickEvents.END_CLIENT_TICK` sets `LivingEntity.jumpingCooldown = 0`
-  through an accessor mixin
+Downloads for every target: https://github.com/Limeter/Hoplet/releases
 
 ## License
 
