@@ -1,6 +1,10 @@
-# Hoplet
+<p align="center">
+  <img src="icon.png" width="128" height="128" alt="Hoplet logo">
+</p>
 
-Removes the vanilla 4-tick jump cooldown — hold Space and hop continuously.
+<h1 align="center">Hoplet</h1>
+
+<p align="center">Removes the vanilla 4-tick jump cooldown — hold Space and hop continuously.</p>
 
 - Client-side only: works on vanilla and modded servers, nothing to install server-side
 - No settings, no keybinds, no dependencies beyond the loader (Fabric API on Fabric)
