@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[61,)"
+license="MIT"
+
+[[mods]]
+modId="hoplet"
+version="1.0.0"
+displayName="Hoplet"
+logoFile="assets/hoplet/icon.png"
+authors="Limeter"
+description='''Removes the jump cooldown - no delay between jumps. Client-side only.'''
+displayTest="IGNORE_ALL_VERSION"
+
+[[dependencies.hoplet]]
+modId="forge"
+mandatory=true
+versionRange="[61,)"
+ordering="NONE"
+side="CLIENT"
+
+[[dependencies.hoplet]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.21.11,1.22)"
+ordering="NONE"
+side="CLIENT"
