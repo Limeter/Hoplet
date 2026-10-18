@@ -1,4 +1,8 @@
-﻿# Hoplet — Forge / Minecraft 1.21.4
+﻿<p align="center">
+  <img src="icon.png" width="96" height="96" alt="Hoplet logo">
+</p>
+
+# Hoplet — Forge / Minecraft 1.21.4
 
 Removes the vanilla 4-tick jump cooldown: hold Space and hop continuously.
 Client-side only, no settings, no keybinds.
@@ -22,3 +26,4 @@ Downloads for every target: https://github.com/Limeter/Hoplet/releases
 ## License
 
 [MIT](LICENSE)
+
